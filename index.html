@@ -468,9 +468,10 @@ Se as linhas mudarem, pesquise por API_URL ou pelo texto do botão.
 
             window.setTimeout(function () {
                 if (!window.closed) {
-                    closeButton.hidden = true;
-                    countdownText.textContent = "Solicitação concluída. O navegador bloqueou o fechamento automático.";
-                    closeHint.textContent = "Feche esta aba pelo botão X do navegador.";
+                    closeButton.textContent = "Fechar esta aba";
+                    closeButton.hidden = false;
+                    countdownText.textContent = "O fechamento automático foi bloqueado. Clique no botão abaixo para tentar novamente.";
+                    closeHint.textContent = "O navegador ainda pode impedir o fechamento por segurança.";
                     closeHint.hidden = false;
                 }
             }, 250);
@@ -680,5 +681,6 @@ Se as linhas mudarem, pesquise por API_URL ou pelo texto do botão.
     </script>
 </body>
 </html>
+
 
 
